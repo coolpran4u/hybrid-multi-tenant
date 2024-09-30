@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "f9128e79-bf5c-4780-b18c-6d61bdb5a541",
+		"name": "adree",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26299472"
+	},
+	"item": [
+		{
+			"name": "schools_for_partner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Tenant-ID",
+						"value": "5c3b19f7-2c4b-40cb-b257-f8bb54f62331",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Gurukul\",\n    \"type\":\"CBSE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/schools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tenants_for_central",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Partner1\",\n    \"dbHost\": \"localhost\",\n    \"dbPort\": 3306,\n    \"dbUsername\": \"root\",\n    \"dbPassword\": \"changeme\",\n    \"databaseName\": \"pt1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tenants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tenants"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
