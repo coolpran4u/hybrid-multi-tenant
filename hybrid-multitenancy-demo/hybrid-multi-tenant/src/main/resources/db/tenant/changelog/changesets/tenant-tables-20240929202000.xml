@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd"
+        logicalFilePath="tenant-tables-20240929202000.xml">
+
+
+    <changeSet id="20240929202001" author="adree">
+        <createTable tableName="SCHOOLS">
+            <column name="SCHOOL_ID" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="SCHOOL_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SCHOOL_TYPE" type="VARCHAR(255)">
+            </column>
+        </createTable>
+
+        <createTable tableName="USERS">
+            <column name="USER_ID" type="VARCHAR(30)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="EMAIL_ADDRESS" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)">
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Additional changesets can be added here -->
+</databaseChangeLog>
